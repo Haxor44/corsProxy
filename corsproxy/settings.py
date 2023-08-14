@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4zky8n1$n9b-t*2j9gdcnjh0rnqqvjl$z+(iuaqi@^^%+s!bzp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://corsproxy-1m4k.onrender.com/proxy']
 
 
 # Application definition
