@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import fetch from 'node-fetch';
-
+const PORT = process.env.PORT || 8081;
 const app = express()
 
 
@@ -14,6 +14,6 @@ app.get("/",async (req,res) => {
     res.json(await response.json())
 })
 
-app.listen(3000,() => {
+app.listen(PORT,() => {
     console.log("Listening on port 3000!!!")
 })
