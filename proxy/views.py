@@ -12,6 +12,7 @@ def index(request):
     if response.status_code == 200:
         text = response.json()
         print(text)
+        response["Access-Control-Allow-Origin"] = "https://roman-frontend.vercel.app/"
         return HttpResponse(text)
     else:
         return HttpResponse("Cors proxy!!!")
