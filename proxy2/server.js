@@ -17,12 +17,17 @@ app.get("/users",async (req,res) => {
     res.json(await response.json())
 })
 
-app.get("/addUser",async (req,res) => {
+app.get("/getUser/:id",async (req,res) => {
+    const response = await fetch(`https://https://emps-hstg.onrender.com/api/v1/users/users/${req.id}`)
+    res.json(await response.json())
+})
+
+app.post("/addUser",async (req,res) => {
     const response = await fetch("https://https://emps-hstg.onrender.com/api/v1/users/addUSer")
     res.json(await response.json())
 })
 
-app.get("/editUser/user/:id",async (req,res) => {
+app.put("/editUser/:id",async (req,res) => {
     const response = await fetch(`https://https://emps-hstg.onrender.com/api/v1/users/users/${req.id}`)
     res.json(await response.json())
 })
