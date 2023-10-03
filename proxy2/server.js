@@ -10,7 +10,20 @@ app.use(cors())
 
 app.get("/",async (req,res) => {
     const response = await fetch("https://service-api-0nnq.onrender.com/api/v2/services")
+    res.json(await response.json())
+})
+app.get("/users",async (req,res) => {
+    const response = await fetch("https://https://emps-hstg.onrender.com/api/v1/users/users")
+    res.json(await response.json())
+})
 
+app.get("/addUser",async (req,res) => {
+    const response = await fetch("https://https://emps-hstg.onrender.com/api/v1/users/addUSer")
+    res.json(await response.json())
+})
+
+app.get("/editUser/user/:id",async (req,res) => {
+    const response = await fetch(`https://https://emps-hstg.onrender.com/api/v1/users/users/${req.id}`)
     res.json(await response.json())
 })
 
